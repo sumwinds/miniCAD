@@ -1,24 +1,25 @@
 package shapes;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public abstract class Shape {
 	
-	private String color = "white";
-	private boolean filled = false;
+	protected Color color = Color.BLACK;
+	protected boolean filled = false;
 	
 	protected Shape() {}
 	
-	protected Shape(String color, boolean filled) {
+	protected Shape(Color color, boolean filled) {
 		this.color = color;
 		this.filled = filled;
 	}
 	
-	public String getColor() {
+	public Color getColor() {
 		return color;
 	}
 	
-	public void setColor(String color) {
+	public void setColor(Color color) {
 		this.color = color;
 	}
 	

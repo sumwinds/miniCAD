@@ -1,11 +1,13 @@
 package shapes;
 
+import field.Picture;
+
 public class MyPic {
 	public static void main(String[] args) 
 	{
 		Picture pic = new Picture(420,300);
-		Text t1 = new Text(50, 50, "泥嚎");
-		Text t2 = new Text(100, 50, "秀的一批");
+		Text t1 = new Text(50, 50, "泥嚎", 28);
+		Text t2 = new Text(100, 50, "秀的一批", 20);
 		pic.add(t1);
 		pic.add(t2);
 		pic.draw();	

@@ -1,14 +1,15 @@
 package shapes;
 
 import java.awt.Graphics;
+import java.awt.Font;
 
-import javafx.scene.text.Font;
 
 public class Text extends Shape {
 	private String text = "";
 	private int xPos = 50;
 	private int yPos = 50;
-	private Font font;
+	private int size = 25;
+	private Font font = new Font(text, Font.PLAIN, size);
 	
 	public Text() {}
 	public Text(String text) {
@@ -18,6 +19,17 @@ public class Text extends Shape {
 		this.xPos = X;
 		this.yPos = Y;
 		this.text = text;
+	}
+	public Text(int X, int Y, String text, int size) {
+		this.xPos = X;
+		this.yPos = Y;
+		this.text = text;
+		this.size = size;
+		font = new Font(text, Font.PLAIN, size);
+	}
+
+	public void setFont(int size) {
+		font = new Font(text, Font.PLAIN, size);
 	}
 	
 	public String getText() {
@@ -38,9 +50,11 @@ public class Text extends Shape {
 	public void setY(int yPos) {
 		this.yPos = yPos;
 	}
+	
 	@Override
 	public void draw(Graphics g) {
-		// TODO Auto-generated method stub
+		g.setColor(color);
+		g.setFont(font);
 		g.drawString(text, xPos, yPos);
 	}
 	
