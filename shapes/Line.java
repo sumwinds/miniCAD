@@ -29,5 +29,20 @@ public class Line extends Shape{
 		g.setColor(super.color);
 		g.drawLine(startX, startY, endX, endY);
 	}
+	@Override
+	public void move(int x, int y) {
+		startX = x;
+		startY = y;
+	}
+	@Override
+	public void beBigger() {
+		endX++;
+		endY++;
+	}
+	@Override
+	public void beNarrow() {
+		endX--;
+		endY--;
+	}
 	
 }

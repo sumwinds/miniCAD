@@ -25,10 +25,27 @@ public class Circle extends Shape {
 		// TODO Auto-generated method stub
 		return super.toString();
 	}
+	
 	@Override
 	public void draw(Graphics g) {
 		g.setColor(color);
 		g.fillOval(centerX, centerY, radius, radius);
+	}
+	
+	@Override
+	public void move(int x, int y) {
+		centerX = x;
+		centerY = y;
+	}
+	
+	@Override
+	public void beBigger() {
+		radius++;
+	}
+	
+	@Override
+	public void beNarrow() {
+		radius--;
 	}
 	
 }

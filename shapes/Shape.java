@@ -31,10 +31,17 @@ public abstract class Shape {
 		this.filled = filled;
 	}
 	
+	public void changeColor(Color color) {
+		this.color = color;
+	}
+	
 	@Override
 	public String toString() {
 		return "color " + color + "and filled: " + filled;
 	}
 	
 	public abstract void draw(Graphics g);
+	public abstract void move(int x, int y);
+	public abstract void beBigger();
+	public abstract void beNarrow();
 }

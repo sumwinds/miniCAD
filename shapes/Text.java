@@ -57,5 +57,20 @@ public class Text extends Shape {
 		g.setFont(font);
 		g.drawString(text, xPos, yPos);
 	}
+	@Override
+	public void move(int x, int y) {
+		xPos = x;
+		yPos = y;
+	}
+	@Override
+	public void beBigger() {
+		size++;
+		font = new Font(text, Font.PLAIN, size);
+	}
+	@Override
+	public void beNarrow() {
+		size--;
+		font = new Font(text, Font.PLAIN, size);
+	}
 	
 }

@@ -29,5 +29,20 @@ public class Rectangle extends Shape {
 		g.fillRect(x, y, width, height);
 		g.drawRect(x, y, width, height);
 	}
+	@Override
+	public void move(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	@Override
+	public void beBigger() {
+		width++;
+		height++;
+	}
+	@Override
+	public void beNarrow() {
+		width--;
+		height--;
+	}
 
 }
